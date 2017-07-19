@@ -1,0 +1,19 @@
+例如：点击一个text ,跳转入一个新的页面blueberry.wxml
+
+首先对text 设置监听事件
+ <view bindtap="toast" class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+然后对该text 设置事件跳转。
+  //事件处理函数 点击text
+  toast: function() {
+    wx.navigateTo({
+      url: '../blueberry/blueberry'
+    })
+  },
+这里看到跳转到一个目录 blueberry下，展示一个 blueberry.wxml页面
+所以在项目的目录下创建一个blueberry
+
+
+同时需要在 app.json 中添加页面配置
+
